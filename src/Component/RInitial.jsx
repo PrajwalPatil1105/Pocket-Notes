@@ -5,7 +5,7 @@ import styles from "./Rinitial.module.css";
 function RInitial() {
   return (
     <div className={styles.InitialPage}>
-      <img className={styles.Img1} src="/images/img1.png" alt="" />
+      <img className={styles.Img1} src="/Images/img1.png" alt="" />
       <h1 className={styles.Title}>Pocket Notes</h1>
       <p className={styles.Para1}>
         Send and receive messages without keeping your phone online. Use Pocket
