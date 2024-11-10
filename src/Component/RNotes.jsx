@@ -24,11 +24,11 @@ function RNotes({
   useEffect(() => {
     if (InputData.length === 0) {
       setIsDisabled(true);
-      setImgToDisplay("/public/Images/Send.png");
+      setImgToDisplay("/Images/Send.png");
       setMsg("Please Type Something In TextBox ");
     } else {
       setIsDisabled(false);
-      setImgToDisplay("/public/Images/Send1.png");
+      setImgToDisplay("/Images/Send1.png");
       setMsg("Add To Notes");
     }
   }, [InputData]);
