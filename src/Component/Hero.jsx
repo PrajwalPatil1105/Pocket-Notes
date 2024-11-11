@@ -21,11 +21,14 @@ function Hero() {
   }
 
   useEffect(() => {
-    setScreenWidth(window.innerWidth);
-    if (window.innerWidth >= 768) {
-      setIsSmallScreen(true);
+    function handleResize() {
+      const width = window.innerWidth;
+      setIsSmallScreen(width >= 768);
     }
-  }, [ScreenWidth]);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   function onSelectItem(index) {
     setSelectedItem(Data[index]);
@@ -55,6 +58,7 @@ function Hero() {
             setIsScreenVisible={setIsScreenVisible}
             setIsButtonVisible={setIsButtonVisible}
             setIsSmallScreen={setIsSmallScreen}
+            isSmallScreen={isSmallScreen}
           />
         )}
 
