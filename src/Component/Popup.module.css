@@ -177,7 +177,7 @@
 
 @media (max-width: 769px) {
   .PopupMenu {
-    width: 84%;
+    width: 21em;
     height: 15em;
   }
 
@@ -190,11 +190,11 @@
   }
 
   .GroupName {
-    font-size: 100%;
+    font-size: 16px;
   }
 
   .GroupNameInput {
-    width: 56%;
+    width: 12em;
     height: 2.3em;
     margin-left: 1em;
     font-size: 15px;
@@ -202,7 +202,7 @@
   }
 
   .GroupColor {
-    font-size: 100%;
+    font-size: 16px;
   }
 
   .FavColor {
@@ -215,8 +215,8 @@
   .Orange,
   .Blue,
   .LightBlue {
-    width: 8.5%;
-    height: 50%;
+    width: 2.1em;
+    height: 2.1em;
     margin-left: 0.5em;
     margin-top: 0.6em;
   }
@@ -227,8 +227,8 @@
   .Orange:hover,
   .Blue:hover,
   .LightBlue:hover {
-    width: 2.7em;
-    height: 2.7em;
+    width: 2.3em;
+    height: 2.3em;
   }
 
   .Create {
@@ -244,5 +244,54 @@
   .AlreadyExistError {
     margin-top: 54.5%;
     margin-left: 17%;
+  }
+}
+
+@media (max-width: 376px) {
+  .PopupMenu {
+    width: 19em;
+    height: 15em;
+  }
+
+  .PopupHeading {
+    font-size: 22px;
+  }
+  .UserGroup {
+    margin-top: 1.9em;
+    height: 3.3em;
+  }
+
+  .GroupNameInput {
+    width: 11.6em;
+    height: 2.3em;
+    margin-left: 1em;
+    font-size: 15px;
+    padding-left: 15px;
+  }
+
+  .FavColor {
+    margin-top: 0.9em;
+  }
+
+  .Lavender,
+  .Pink,
+  .AquaBlue,
+  .Orange,
+  .Blue,
+  .LightBlue {
+    width: 2.1em;
+    height: 2.1em;
+    margin-left: 0.4em;
+    margin-top: 0.6em;
+  }
+
+  .Lavender:hover,
+  .Pink:hover,
+  .AquaBlue:hover,
+  .Orange:hover,
+  .Blue:hover,
+  .LightBlue:hover {
+    width: 2.3em;
+    height: 2.3em;
   }
 }
