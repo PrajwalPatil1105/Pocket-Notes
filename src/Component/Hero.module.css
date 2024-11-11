@@ -29,10 +29,12 @@
 }
 
 .AddButton:hover {
-  background-color: rgb(93, 61, 163);
+  width: 1.33em;
+  height: 1.33em;
+  box-shadow: 0px 0px 10px #4c4e4e;
 }
 
-@media (max-width: 391px) {
+@media (max-width: 769px) {
   .main {
     grid-template-columns: 100%;
   }

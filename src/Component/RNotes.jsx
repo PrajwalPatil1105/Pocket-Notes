@@ -9,7 +9,7 @@ function RNotes({
   setData,
   setIsScreenVisible,
   setIsButtonVisible,
-  isSmallScreen,
+  setIsSmallScreen,
 }) {
   const [InputData, setInputData] = useState(
     localStorage.getItem("InputField")
@@ -63,8 +63,7 @@ function RNotes({
   }
 
   function Back() {
-    if (isSmallScreen) {
-    }
+    setIsSmallScreen(false);
     setIsScreenVisible(true);
     setIsButtonVisible("block");
   }

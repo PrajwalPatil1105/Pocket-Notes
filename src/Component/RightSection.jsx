@@ -1,8 +1,4 @@
 import React from "react";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
-import styles from "./RightSection.module.css";
 import RInitial from "./RInitial";
 import RNotes from "./RNotes";
 
@@ -12,7 +8,7 @@ function RightSection({
   setData,
   setIsScreenVisible,
   setIsButtonVisible,
-  isSmallScreen,
+  setIsSmallScreen,
 }) {
   return (
     <section>
@@ -24,7 +20,7 @@ function RightSection({
           setData={setData}
           setIsScreenVisible={setIsScreenVisible}
           setIsButtonVisible={setIsButtonVisible}
-          isSmallScreen={isSmallScreen}
+          setIsSmallScreen={setIsSmallScreen}
         />
       ) : (
         <RInitial />

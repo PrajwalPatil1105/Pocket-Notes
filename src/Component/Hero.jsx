@@ -10,6 +10,7 @@ function Hero() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isScreenVisible, setIsScreenVisible] = useState(true);
   const [isButtonVisible, setIsButtonVisible] = useState("block");
+  const [ScreenWidth, setScreenWidth] = useState();
 
   const [Data, setData] = useState(
     localStorage.getItem("Data") ? JSON.parse(localStorage.getItem("Data")) : []
@@ -19,9 +20,17 @@ function Hero() {
     setIsPopupOpen(!isPopupOpen);
   }
 
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+    if (window.innerWidth >= 768) {
+      setIsSmallScreen(true);
+    }
+  }, [ScreenWidth]);
+
   function onSelectItem(index) {
     setSelectedItem(Data[index]);
-    if (window.innerWidth <= 400) {
+    setIsSmallScreen(true);
+    if (window.innerWidth <= 769) {
       setIsScreenVisible(false);
       setIsButtonVisible("none");
     }
@@ -37,14 +46,18 @@ function Hero() {
         {isScreenVisible && (
           <LeftSection data={Data} onSelectItem={onSelectItem} />
         )}
-        <RightSection
-          item={selectedItem}
-          data={Data}
-          setData={setData}
-          setIsScreenVisible={setIsScreenVisible}
-          setIsButtonVisible={setIsButtonVisible}
-          isSmallScreen={isSmallScreen}
-        />
+
+        {isSmallScreen && (
+          <RightSection
+            item={selectedItem}
+            data={Data}
+            setData={setData}
+            setIsScreenVisible={setIsScreenVisible}
+            setIsButtonVisible={setIsButtonVisible}
+            setIsSmallScreen={setIsSmallScreen}
+          />
+        )}
+
         <button
           onClick={PopScreen}
           className={styles.AddButton}
