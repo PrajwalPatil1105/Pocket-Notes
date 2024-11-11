@@ -49,8 +49,9 @@
   min-width: 3.5em;
   min-height: 3.5em;
   border-radius: 10em;
-  text-align: center;
   align-content: center;
+  text-align: center;
+  justify-items: center;
 }
 
 .Initials {
@@ -85,5 +86,6 @@
 
   .SubGroup {
     padding-left: 10%;
+    width: 80%;
   }
 }

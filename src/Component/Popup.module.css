@@ -85,7 +85,7 @@
   height: 3.2em;
   border-radius: 100%;
   margin-left: 1em;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   cursor: pointer;
 }
 
@@ -177,7 +177,7 @@
 
 @media (max-width: 769px) {
   .PopupMenu {
-    width: 80%;
+    width: 84%;
     height: 15em;
   }
 
@@ -190,11 +190,11 @@
   }
 
   .GroupName {
-    font-size: 16px;
+    font-size: 100%;
   }
 
   .GroupNameInput {
-    width: 12em;
+    width: 56%;
     height: 2.3em;
     margin-left: 1em;
     font-size: 15px;
@@ -202,7 +202,7 @@
   }
 
   .GroupColor {
-    font-size: 16px;
+    font-size: 100%;
   }
 
   .FavColor {
@@ -215,8 +215,8 @@
   .Orange,
   .Blue,
   .LightBlue {
-    width: 2.1em;
-    height: 2.1em;
+    width: 8.5%;
+    height: 50%;
     margin-left: 0.5em;
     margin-top: 0.6em;
   }
@@ -227,8 +227,8 @@
   .Orange:hover,
   .Blue:hover,
   .LightBlue:hover {
-    width: 2.3em;
-    height: 2.3em;
+    width: 2.7em;
+    height: 2.7em;
   }
 
   .Create {

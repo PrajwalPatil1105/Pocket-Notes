@@ -9,7 +9,6 @@
 .NoteHeading {
   width: 100%;
   height: 4.7em;
-  /* height: 10%; */
   background-color: rgba(0, 31, 139, 1);
   display: flex;
   align-items: center;
@@ -20,8 +19,9 @@
   min-height: 3.5em;
   margin-left: 2em;
   border-radius: 50%;
-  text-align: center;
   align-content: center;
+  text-align: center;
+  justify-items: center;
 }
 
 .NotesInitials {
