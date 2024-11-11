@@ -134,7 +134,7 @@ function Popup({ onClose, setData, Data }) {
           <p className={styles.ColorError}>{UserColorError}</p>
         </div>
         <p className={styles.AlreadyExistError}>{CheckName}</p>
-        <button className={styles.Create} onClick={add}>
+        <button className={styles.Create} onClick={add} title="Add Group">
           Create
         </button>
       </div>

@@ -10,6 +10,7 @@ function RightSection({
   setIsButtonVisible,
   setIsSmallScreen,
   isSmallScreen,
+  isFirstPage,
 }) {
   return (
     <section>
@@ -24,7 +25,7 @@ function RightSection({
           setIsSmallScreen={setIsSmallScreen}
         />
       ) : (
-        isSmallScreen && <RInitial />
+        isFirstPage && <RInitial />
       )}
     </section>
   );

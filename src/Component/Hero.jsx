@@ -7,10 +7,10 @@ import Popup from "./Popup";
 function Hero() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth >= 768);
   const [isScreenVisible, setIsScreenVisible] = useState(true);
   const [isButtonVisible, setIsButtonVisible] = useState("block");
-  const [ScreenWidth, setScreenWidth] = useState();
+  const [isFirstPage, setIsFirstPage] = useState(window.innerWidth >= 768);
 
   const [Data, setData] = useState(
     localStorage.getItem("Data") ? JSON.parse(localStorage.getItem("Data")) : []
@@ -23,7 +23,11 @@ function Hero() {
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
-      setIsSmallScreen(width >= 768);
+      if (width >= 768) {
+        setIsFirstPage(true);
+      } else {
+        setIsFirstPage(false);
+      }
     }
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -59,6 +63,7 @@ function Hero() {
             setIsButtonVisible={setIsButtonVisible}
             setIsSmallScreen={setIsSmallScreen}
             isSmallScreen={isSmallScreen}
+            isFirstPage={isFirstPage}
           />
         )}
 
