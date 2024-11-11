@@ -252,25 +252,12 @@
     width: 19em;
     height: 15em;
   }
-
-  .PopupHeading {
-    font-size: 22px;
-  }
-  .UserGroup {
-    margin-top: 1.9em;
-    height: 3.3em;
-  }
-
   .GroupNameInput {
     width: 11.6em;
     height: 2.3em;
     margin-left: 1em;
     font-size: 15px;
     padding-left: 15px;
-  }
-
-  .FavColor {
-    margin-top: 0.9em;
   }
 
   .Lavender,
@@ -291,7 +278,7 @@
   .Orange:hover,
   .Blue:hover,
   .LightBlue:hover {
-    width: 2.3em;
-    height: 2.3em;
+    width: 2.2em;
+    height: 2.2em;
   }
 }
