@@ -12,6 +12,7 @@
   background-color: rgba(0, 31, 139, 1);
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .NotesInitialName {

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import styles from "./LeftSection.module.css";
-import RightSection from "./RightSection";
 
 function LeftSection({ data, onSelectItem }) {
   const [id, setid] = useState(null);
